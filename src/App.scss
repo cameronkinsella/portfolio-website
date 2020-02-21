@@ -2,6 +2,22 @@
   text-align: center;
 }
 
+.NotFound {
+  background-color: #ffedef;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 3vmin);
+  color: #eeeeee;
+}
+
+.NotFoundImage {
+  width: 50%;
+  height: 100%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -26,7 +42,7 @@
 
 
 .App-body {
-  background-color: #202124;
+  background-color: #000000;
   min-height: 100vh;
   display: flex;
   font-size: calc(10px + 2vmin);
@@ -34,10 +50,6 @@
   align-items: center;
   justify-content: center;
   color: #eeeeee;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 .chevron {
@@ -58,6 +70,8 @@
 .github {
   margin: auto 4vmin;
   transition: all 0.4s;
+  color: #eeeeee;
+  fill: #eeeeee;
   &:hover  {
     color: #6441a5;
     fill: #6441a5;
@@ -69,7 +83,7 @@
   fill: #0077B5;
 }
 
-.email:hover {
+.email:hover, .email:focus {
   background: #e70c6b;
   fill: #e70c6b;
 }
@@ -80,9 +94,9 @@
 }
 
 .bubble {
-  background-color: #eeeeee;
-  border-radius: 50%;
+  background: #eeeeee;
   color: black;
+  border-radius: 50%;
   width: 2em;
   height: 2em;
   line-height: 2em;
@@ -100,4 +114,31 @@
   }
 }
 
+.header {
+  position: absolute;
+  top: 105%;
+  font-size: 7vmin;
+  font-weight: 200;
+  background: transparent;
+  border-radius: 10px;
+  height: 0.03em;
+  width: 14em;
+  box-shadow: 0 1.2em 0 0 #eeeeee;
+}
 
+.subHeader {
+  position: absolute;
+  left: 5em;
+  top: 115%;
+  font-size: 7vmin;
+  font-weight: 200;
+  background: transparent;
+  border-radius: 10px;
+  height: 0.03em;
+  width: 14em;
+  box-shadow: -5em 1.2em 0 0 #eeeeee;
+}
+
+html {
+  scroll-behavior: smooth;
+}
