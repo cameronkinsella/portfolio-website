@@ -36,7 +36,7 @@ img.NotFound {
 }
 
 .App-header {
-  background-color: #000000;
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -48,20 +48,26 @@ img.NotFound {
 
 
 .App-body {
-  background-color: #000000;
+  background-color: black;
   min-height: 100vh;
   display: flex;
   font-size: calc(10px + 2vmin);
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   color: #eeeeee;
 }
 
-.chevron {
+.chevron1 {
   position: absolute;
   left: 50%;
   bottom: 5%;
+  color: #eeeeee;
+  fill: #eeeeee;
+}
+
+.chevron2 {
+  margin-top: 0.5em;
   color: #eeeeee;
   fill: #eeeeee;
 }
@@ -84,12 +90,23 @@ img.NotFound {
   }
 }
 
+.code {
+  margin-top: 0.5em;
+  transition: all 0.4s;
+  color: #eeeeee;
+  fill: #eeeeee;
+  &:hover  {
+    color: red;
+    fill: red;
+  }
+}
+
 .linkedin:hover {
   background: #0077B5;
   fill: #0077B5;
 }
 
-.email:hover, .email:focus {
+.email:hover {
   background: #e70c6b;
   fill: #e70c6b;
 }
@@ -120,31 +137,68 @@ img.NotFound {
   }
 }
 
-.header {
-  position: absolute;
-  top: 105%;
+.header1 {
+  position: relative;
+  top: 2em;
   font-size: 7vmin;
   font-weight: 200;
   background: transparent;
   border-radius: 10px;
   height: 0.03em;
-  width: 14em;
+  width: 50%;
   box-shadow: 0 1.2em 0 0 #eeeeee;
 }
 
-.subHeader {
-  position: absolute;
-  left: 5em;
-  top: 115%;
+.header2 {
+  position: relative;
+  top: 2em;
   font-size: 7vmin;
   font-weight: 200;
   background: transparent;
   border-radius: 10px;
   height: 0.03em;
-  width: 14em;
-  box-shadow: -5em 1.2em 0 0 #eeeeee;
+  width: 7em;
+  box-shadow: 0 calc(12px + 1.2em) 0 0 #eeeeee;
 }
+
+.bodyContent {
+  border-radius: 2em;
+  padding: 5em;
+  margin: 2em;
+  background-image: url('./assets/power.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.bodyBlock {
+  border-radius: 0.5em;
+  padding: 1em;
+  margin: 5em;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.portrait {
+  height: auto;
+  width: 15em;
+  border-radius: 50%;
+  margin-top: 15%;
+}
+
+.backgroundImg {
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+}
+
+.projectsHeader {
+  font-weight: 200;
+  margin-top: 75%;
+}
+
+
 
 html {
   scroll-behavior: smooth;
+  background-color: black;
 }
