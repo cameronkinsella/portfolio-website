@@ -29,7 +29,7 @@ function Home() {
           UWaterloo Mechatronics Engineering
         </p>
         <div className={'icon'}>
-          <a title={'Github: cameronkinsella'} href={'https://github.com/cameronkinsella'}>
+          <a className={'githubBubble'} title={'Github: cameronkinsella'} href={'https://github.com/cameronkinsella'}>
             <FontAwesomeIcon icon={faGithub} size={'2x'} className={'github'}/>
           </a>
           <a title={'Linkedin: cameronkinsella'} href={'https://www.linkedin.com/in/cameronkinsella/'}>
@@ -48,7 +48,7 @@ function Home() {
       </header>
       <body className={'App-body'}>
       <div className={'header1'} ref={aboutMe}>
-        <ScrollAnimation animateIn={'fadeInLeft'} animateOnce={true}>
+        <ScrollAnimation animateIn={'fadeIn'} animateOnce={true}>
           About Me
         </ScrollAnimation>
       </div>
@@ -77,7 +77,7 @@ function Home() {
       </div>
       <div className={'App-body'}>
         <div className={'header2'}>
-          <ScrollAnimation animateIn={'fadeInLeft'} animateOnce={true}>
+          <ScrollAnimation animateIn={'fadeIn'} animateOnce={true}>
             Projects
           </ScrollAnimation>
         </div>

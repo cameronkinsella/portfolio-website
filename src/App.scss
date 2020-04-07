@@ -60,7 +60,7 @@ img.NotFound {
 
 .chevron1 {
   position: absolute;
-  left: 50%;
+  left: 49%;
   bottom: 5%;
   color: #eeeeee;
   fill: #eeeeee;
@@ -80,7 +80,6 @@ img.NotFound {
 }
 
 .github {
-  margin: auto 4vmin;
   transition: all 0.4s;
   color: #eeeeee;
   fill: #eeeeee;
@@ -88,6 +87,13 @@ img.NotFound {
     color: #6441a5;
     fill: #6441a5;
   }
+}
+
+.githubBubble {
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
 }
 
 .code {
@@ -123,9 +129,20 @@ img.NotFound {
   width: 2em;
   height: 2em;
   line-height: 2em;
-  margin: auto 4vmin;
   text-align: center;
   transition: all 0.4s;
+}
+
+.Node\.js {
+  color: #44883e;
+}
+
+.JavaScript {
+  color: #f7df1e;
+}
+
+.React\.js {
+  color: #00d8ff;
 }
 
 @keyframes App-logo-spin {
@@ -196,7 +213,55 @@ img.NotFound {
   margin-top: 75%;
 }
 
+.projectsBlock {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: auto;
+  border-radius: 1em;
+  border-color: #eeeeee;
+  border-width: 2px;
+  border-style: solid;
+  margin: 5%;
+}
 
+.projectsDetailsBlock {
+  width: 15em;
+  height: auto;
+}
+
+.projectsDetails {
+  padding: 2vmin;
+}
+
+.projectsImage {
+  object-fit: cover;
+  height: auto;
+  width: 100%;
+  border-color: #eeeeee;
+  border-radius: 0 0.9em 0.9em 0;
+}
+
+.projectsTechIcons {
+  padding: 1vmin;
+}
+
+.projectsSecondaryTechIcons {
+  height: calc(10px + 2vmin);
+  width: calc(10px + 2vmin);
+  margin-bottom: 0.5vmin;
+  padding: 0 1vmin;
+}
+
+.titleTag {
+  height: calc(10px + 2vmin);
+  width: calc(10px + 2vmin);
+}
+
+a {
+  border-radius: 50%;
+  margin: auto 4vmin;
+}
 
 html {
   scroll-behavior: smooth;
