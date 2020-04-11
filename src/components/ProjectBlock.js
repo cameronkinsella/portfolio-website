@@ -1,45 +1,93 @@
 import React, { useState } from 'react'
-import {faJs, faNodeJs, faReact } from '@fortawesome/free-brands-svg-icons';
+import { faJs, faNodeJs, faReact } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 export function ProjectBlock(props) {
   const [tech] = useState(props.tech);
 
+  /*
+  Required props:
+  title -> project title
+  link -> address that the link button will go to
+  color -> color of the link button
+  src -> image source
+  ratio -> image ratio (Height / Width * 100)
+  desc -> project description
+  tech -> list of tech used in the project, in an array. Names must match one of the names provided in the icon list below
+   */
+
   const icon = {
-    Python: require('../assets/icons/python.svg'),
+    'Python': require('../assets/icons/python.svg'),
     'Node.js': faNodeJs,
-    JavaScript: faJs,
-    HTML5: require('../assets/icons/html5.svg'),
-    CSS3: require('../assets/icons/css3.svg'),
+    'JavaScript': faJs,
+    'HTML5': require('../assets/icons/html5.svg'),
+    'CSS3': require('../assets/icons/css3.svg'),
+    'PHP': require('../assets/icons/php.svg'),
     'React.js': faReact,
-    PyTorch: require('../assets/icons/pytorch.svg'),
-    OpenCV: require('../assets/icons/opencv.svg'),
+    'React-Native': faReact,
+    'PyTorch': require('../assets/icons/pytorch.svg'),
+    'OpenCV': require('../assets/icons/opencv.svg'),
+    'Google Cloud Platform': require('../assets/icons/gcp.svg')
   };
 
-
   return (
-    <div className={'projectsBlock'}>
-      <div className={'projectsDetailsBlock'}>
-        <div className={'projectsDetails'}>
-          <h4>Description:</h4>
-          <p style={{fontSize: 18}}>
-          {props.desc}
-          </p>
+    <div className={'projectsBlock'}
+         style={window.mobileCheck() ? { width: '90%', flexDirection: 'column-reverse' } : {
+           width: '50%',
+           flexDirection: 'row'
+         }}>
+      <div style={window.mobileCheck() ? null : { width: '20em' }}>
+        <div>
+          <h4>{props.title}</h4>
         </div>
-        <div className={'projectsDetails'} style={{borderColor: '#eeeeee', borderWidth: '0', borderTopWidth: '2px', borderStyle: 'solid'}}>
-          <h4>Technologies:</h4>
+        <div className={'projectsDetails'} style={{ fontSize: 18 }}>
+          <p style={{ fontWeight: 200, fontSize: 'calc(10px + 2vmin)' }}>Description:</p>
+          {props.desc}
+        </div>
+        <div className={'projectsDetails'}>
+          <p style={{ fontWeight: 200 }}>Technologies:</p>
           {
-            tech.map(x => typeof icon[x] !== 'string' ? (
-              <FontAwesomeIcon title={x} className={`projectsTechIcons ${x}`} icon={icon[x]}/>
-            ):
-              <object title={x} className={'projectsSecondaryTechIcons'} data={icon[x]} type={'image/svg+xml'}>
+            tech.map((x, i) => typeof icon[x] !== 'string' ? (
+                <FontAwesomeIcon key={i} title={titleName(x)} className={`projectsTechIcons ${x}`} icon={icon[x]}/>
+              ) :
+              <object key={i} title={titleName(x)} className={'projectsSecondaryTechIcons'} data={icon[x]}
+                      type={'image/svg+xml'}>
                 {x}
               </object>
             )
           }
         </div>
       </div>
-      <img src={props.src} alt={''} className={'projectsImage'}/>
+      <div className={'projectsImage'}
+           style={window.mobileCheck() ?
+             {
+               backgroundImage: `url(${props.src})`,
+               borderRadius: '0.9em 0.9em 0 0',
+               borderWidth: '0 0 2px 0',
+               height: 0,
+               paddingTop: `${props.ratio}%`
+             } :
+             {
+               backgroundImage: `url(${props.src})`,
+               borderRadius: '0 0.9em 0.9em 0',
+               borderWidth: '0 0 0 2px',
+               width: '100vh'
+             }}>
+        <a title={'Go to Project'} href={props.link} className={'projectsLink'}
+           style={window.mobileCheck() ? {
+             color: `${props.color}`,
+             top: `-95%`
+           } : { color: `${props.color}`, top: '5%' }}>
+          <FontAwesomeIcon icon={faExternalLinkAlt} size={'2x'}/>
+        </a>
+      </div>
     </div>
   )
+}
+
+function titleName(name) {
+  // Since class names need to be one word, dashes are added to any multi-worded technology names
+  // This function gets rid of those dashes for the icon tooltips
+  return name.replace(/-/g, ' ')
 }
