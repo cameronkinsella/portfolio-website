@@ -33,11 +33,14 @@ export function ProjectBlock(props) {
 
   return (
     <div className={'projectsBlock'}
-         style={window.mobileCheck() ? { width: '90%', flexDirection: 'column-reverse' } : {
-           width: '50%',
-           flexDirection: 'row'
-         }}>
-      <div style={window.mobileCheck() ? null : { width: '20em' }}>
+         style={window.mobileCheck() ?
+           { width: '90%', flexDirection: 'column-reverse' } :
+           { width: '70%', flexDirection: 'row' }
+         }>
+      <div className={'projectsDetailsBlock'} style={window.mobileCheck() ?
+        { borderRadius: '0 0 1em 1em' } :
+        { width: '32em', borderRadius: '1em 0 0 1em' }
+      }>
         <div>
           <h4>{props.title}</h4>
         </div>
@@ -51,9 +54,9 @@ export function ProjectBlock(props) {
             tech.map((x, i) => typeof icon[x] !== 'string' ? (
                 <FontAwesomeIcon key={i} title={titleName(x)} className={`projectsTechIcons ${x}`} icon={icon[x]}/>
               ) :
-              <object key={i} title={titleName(x)} className={'projectsSecondaryTechIcons'} data={icon[x]}
+              <object key={i} title={titleName(x)} className={'projectsSVGTechIcons'} data={icon[x]}
                       type={'image/svg+xml'}>
-                {x}
+                {titleName(x)}
               </object>
             )
           }
@@ -64,14 +67,12 @@ export function ProjectBlock(props) {
              {
                backgroundImage: `url(${props.src})`,
                borderRadius: '0.9em 0.9em 0 0',
-               borderWidth: '0 0 2px 0',
                height: 0,
                paddingTop: `${props.ratio}%`
              } :
              {
                backgroundImage: `url(${props.src})`,
                borderRadius: '0 0.9em 0.9em 0',
-               borderWidth: '0 0 0 2px',
                width: '100vh'
              }}>
         <a title={'Go to Project'} href={props.link} className={'projectsLink'}

@@ -58,12 +58,12 @@ function Home() {
         <h2 style={{ fontWeight: 200, marginBottom: '5em' }}>Hello there, I'm Cameron</h2>
         <div className={'bodyContent'}
              style={window.mobileCheck() ?
-               { backgroundImage: `url(${gliding})`, backgroundSize: 'cover', padding: '2em 1em', margin: '2em 1em' } :
-               { backgroundImage: `url(${power})`, backgroundSize: '100% auto', padding: '5em', margin: '2em' }}>
+               { backgroundImage: `url(${gliding})`, padding: '2em 1em', margin: '2em 1em' } :
+               { backgroundImage: `url(${power})`, margin: '2em' }}>
           <ScrollAnimation animateIn={'fadeIn'}>
             <div className={'bodyBlock'} style={window.mobileCheck() ?
-              { margin: '5em 0', fontSize: 'calc(10px + 1vmin)' } :
-              { margin: '5em' }}>
+              { margin: '8em 0', fontSize: 'calc(10px + 1vmin)' } :
+              { margin: '8em 5%' }}>
               I'm a Mechatronics Engineering student at the
               University of Waterloo with a passion for Software Development.
               I'm also a pilot! Aircraft I've flown include: <br/>
@@ -73,7 +73,7 @@ function Home() {
           <ScrollAnimation animateIn={'fadeIn'}>
             <div className={'bodyBlock'} style={window.mobileCheck() ?
               { margin: '8em 0', fontSize: 'calc(10px + 1vmin)' } :
-              { margin: '5em' }}>
+              { margin: '8em 5%' }}>
               My favorite hobby is programming!
               I like to learn by working on projects in my free time.
               Through my personal projects, I've gained experience in a

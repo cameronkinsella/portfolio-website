@@ -1,12 +1,21 @@
 import React from 'react';
+import '../App.scss';
 import { ProjectBlock } from '../components/ProjectBlock'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useHistory } from 'react-router-dom';
 
 import abby from '../assets/thumbnails/abby.png'
 import mailstorm from '../assets/thumbnails/mailstorm.jpeg'
 
+
 function Projects() {
+  let history = useHistory();
+
+  const goToHome = () => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    history.push("/");
+  };
 
   return (
     <div className={'App'}>
@@ -16,6 +25,13 @@ function Projects() {
           A list of all my major projects
         </p>
         <FontAwesomeIcon icon={faChevronDown} className={'chevron1'}/>
+        <div className={'backButton'}>
+          <div className={'backButtonIcon'} onClick={goToHome} title={'Go to Home Page'}
+               style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <FontAwesomeIcon icon={faArrowLeft} size={'2x'}/>
+          </div>
+          <p className={'backButtonText'}>Back</p>
+        </div>
       </header>
       <div>
         <div className={'App-body'}>

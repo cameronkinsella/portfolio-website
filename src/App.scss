@@ -1,38 +1,16 @@
+// General
+
+a {
+  border-radius: 50%;
+  margin: auto 4vmin;
+}
+
+html {
+  background-color: black;
+}
+
 .App {
   text-align: center;
-}
-
-.NotFound {
-  background-color: #ffedef;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 3vmin);
-  color: #eeeeee;
-}
-
-.NotFoundImage {
-  height: 30%;
-  flex: 1;
-}
-
-img.NotFound {
-  flex: 1;
-  height: 50%;
-  width: auto;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -46,7 +24,6 @@ img.NotFound {
   color: #eeeeee;
 }
 
-
 .App-body {
   background-color: black;
   min-height: 100vh;
@@ -57,6 +34,161 @@ img.NotFound {
   justify-content: flex-start;
   color: #eeeeee;
 }
+
+
+// Home Page
+
+.header1 {
+  position: relative;
+  top: 2em;
+  font-size: 7vmin;
+  font-weight: 200;
+  background: transparent;
+  border-radius: 10px;
+  height: 0.03em;
+  width: 50%;
+  box-shadow: 0 1.2em 0 0 #eeeeee;
+}
+
+.header2 {
+  position: relative;
+  top: 2em;
+  font-size: 7vmin;
+  font-weight: 200;
+  background: transparent;
+  border-radius: 10px;
+  height: 0.03em;
+  width: 7em;
+  box-shadow: 0 calc(12px + 1.2em) 0 0 #eeeeee;
+}
+
+.bodyContent {
+  border-radius: 2em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bodyBlock {
+  border-radius: 0.5em;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.portrait {
+  height: auto;
+  width: 15em;
+  border-radius: 50%;
+  margin-top: 10em;
+}
+
+.backgroundImg {
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+}
+
+
+// Projects Page
+
+.projectsHeader {
+  font-weight: 200;
+  margin-top: 75%;
+}
+
+.projectsBlock {
+  display: flex;
+  border-color: #eeeeee;
+  margin: 5%;
+}
+
+.projectsDetails {
+  padding: 2vmin;
+  border-color: #eeeeee;
+  border-width: 2px 0 0 0;
+  border-style: solid;
+}
+
+.projectsDetailsBlock {
+  border-color: #eeeeee;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.projectsImage {
+  background-size: cover;
+  border-color: #eeeeee;
+  border-style: solid;
+  border-width: 2px;
+  background-position: center;
+}
+
+.projectsTechIcons {
+  font-size: calc(10px + 3vmin);
+  padding: 1vmin;
+}
+
+.projectsSVGTechIcons {
+  height: calc(10px + 3vmin);
+  width: calc(10px + 3vmin);
+  margin-bottom: 0.5vmin;
+  padding: 0 1vmin;
+}
+
+.projectsLink {
+  position: relative;
+  left: 0;
+  float: right;
+  transition: all 0.4s;
+  z-index: 999;
+
+  &:hover {
+    z-index: 999;
+    font-size: 2em;
+  }
+}
+
+.backButton {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+
+  & div:hover {
+    color: black;
+    background-color: #eeeeee;
+  }
+
+  & div:hover ~ .backButtonText {
+    opacity: 1;
+  }
+}
+
+.backButtonIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eeeeee;
+  background-color: black;
+  fill: #eeeeee;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 2.5em;
+  transition: all 0.4s;
+}
+
+.backButtonText {
+  color: #eeeeee;
+  position: relative;
+  top: -0.5em;
+  left: 1em;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+
+// Misc. Icons
 
 .chevron1 {
   position: absolute;
@@ -72,6 +204,9 @@ img.NotFound {
   fill: #eeeeee;
 }
 
+
+// Social Icons
+
 .icon {
   display: flex;
   flex-direction: row;
@@ -83,7 +218,8 @@ img.NotFound {
   transition: all 0.4s;
   color: #eeeeee;
   fill: #eeeeee;
-  &:hover  {
+
+  &:hover {
     color: #6441a5;
     fill: #6441a5;
   }
@@ -101,7 +237,8 @@ img.NotFound {
   transition: all 0.4s;
   color: #eeeeee;
   fill: #eeeeee;
-  &:hover  {
+
+  &:hover {
     color: red;
     fill: red;
   }
@@ -133,6 +270,9 @@ img.NotFound {
   transition: all 0.4s;
 }
 
+
+// Tech Icons
+
 .Node\.js {
   color: #44883e;
 }
@@ -145,130 +285,31 @@ img.NotFound {
   color: #00d8ff;
 }
 
-.React-Native  {
+.React-Native {
   color: #00d8ff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-.header1 {
-  position: relative;
-  top: 2em;
-  font-size: 7vmin;
-  font-weight: 200;
-  background: transparent;
-  border-radius: 10px;
-  height: 0.03em;
-  width: 50%;
-  box-shadow: 0 1.2em 0 0 #eeeeee;
-}
+// 404 Page
 
-.header2 {
-  position: relative;
-  top: 2em;
-  font-size: 7vmin;
-  font-weight: 200;
-  background: transparent;
-  border-radius: 10px;
-  height: 0.03em;
-  width: 7em;
-  box-shadow: 0 calc(12px + 1.2em) 0 0 #eeeeee;
-}
-
-.bodyContent {
-  border-radius: 2em;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.bodyBlock {
-  border-radius: 0.5em;
-  padding: 1em;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.portrait {
-  height: auto;
-  width: 15em;
-  border-radius: 50%;
-  margin-top: 10em;
-}
-
-.backgroundImg {
-  width: 100%;
-  height: auto;
-  opacity: 0.5;
-}
-
-.projectsHeader {
-  font-weight: 200;
-  margin-top: 75%;
-}
-
-.projectsBlock {
+.NotFound {
+  background-color: #ffedef;
+  min-height: 100vh;
   display: flex;
-  border-radius: 1em;
-  border-color: #eeeeee;
-  border-width: 2px;
-  border-style: solid;
-  margin: 5%;
-}
-
-.projectsDetails {
-  padding: 2vmin;
-  border-color: #eeeeee;
-  border-width: 2px 0 0 0;
-  border-style: solid;
-}
-
-.projectsImage {
-  background-size: cover;
-  border-color: #eeeeee;
-  border-style: solid;
-  background-position: center;
-}
-
-.projectsTechIcons {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-size: calc(10px + 3vmin);
-  padding: 1vmin;
+  color: #eeeeee;
 }
 
-.projectsSecondaryTechIcons {
-  height: calc(10px + 3vmin);
-  width: calc(10px + 3vmin);
-  margin-bottom: 0.5vmin;
-  padding: 0 1vmin;
+.NotFoundImage {
+  height: 30%;
+  flex: 1;
 }
 
-.projectsLink {
-  position: relative;
-  left: 0;
-  float: right;
-  transition: all 0.4s;
-  z-index: 999;
-  &:hover {
-    z-index: 999;
-    font-size: 2em;
-  }
-}
-
-.titleTag {
-  height: calc(10px + 2vmin);
-  width: calc(10px + 2vmin);
-}
-
-a {
-  border-radius: 50%;
-  margin: auto 4vmin;
-}
-
-html {
-  background-color: black;
+img.NotFound {
+  flex: 1;
+  height: 50%;
+  width: auto;
 }
