@@ -5,8 +5,9 @@ import { faArrowLeft, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useHistory } from 'react-router-dom';
 
-import abby from '../assets/thumbnails/abby.png'
+//import abby from '../assets/thumbnails/abby.png'
 import mailstorm from '../assets/thumbnails/mailstorm.jpeg'
+import sudoku from '../assets/thumbnails/seppuku-sudoku.png'
 
 
 function Projects() {
@@ -36,12 +37,11 @@ function Projects() {
       <div>
         <div className={'App-body'}>
           <ProjectBlock title={'Sudoku Solver'} link={'https://seppuku-sudoku.web.app'}
-                        color={'black'} src={abby} ratio={'62.5'} desc={
+                        color={'black'} src={sudoku} ratio={'74.1'} desc={
             <p>A Sudoku solver which uses computer vision to solve any game of Sudoku from just a picture.<br/><br/>Users
               can upload an image of a Sudoku game to the serverless backend. <b>OpenCV</b> is used to extract each tile
               from the board and a neural network built using <b>PyTorch</b> is used to identify each tile. Using
-              backtracking, the board is solved and sent back to the user. Networking was accomplished through the use
-              of Cloud Functions.</p>
+              backtracking, the board is solved and sent back to the user. A manual input option is available as well.</p>
           } tech={
             ['Python', 'OpenCV', 'PyTorch', 'React.js', 'Google Cloud Platform']
           }/>
