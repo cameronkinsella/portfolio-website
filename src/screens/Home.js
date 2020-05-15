@@ -94,7 +94,7 @@ function Home() {
           <ScrollAnimation animateIn={'bounce'}>
             <FontAwesomeIcon icon={faChevronDown} className={'chevron2'}/>
           </ScrollAnimation>
-          <FontAwesomeIcon title={'Go to Projects'} onClick={goToProjects} icon={faCode} size={'5x'} className={'code'}/>
+          <FontAwesomeIcon onClick={goToProjects} icon={faCode} size={'5x'} className={'code'}/>
         </div>
       </div>
     </div>

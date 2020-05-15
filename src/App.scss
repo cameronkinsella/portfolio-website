@@ -166,6 +166,7 @@ html {
 }
 
 .backButtonIcon {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -233,6 +234,7 @@ html {
 }
 
 .code {
+  cursor: pointer;
   margin-top: 0.5em;
   transition: all 0.4s;
   color: #eeeeee;

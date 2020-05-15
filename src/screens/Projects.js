@@ -27,7 +27,7 @@ function Projects() {
         </p>
         <FontAwesomeIcon icon={faChevronDown} className={'chevron1'}/>
         <div className={'backButton'}>
-          <div className={'backButtonIcon'} onClick={goToHome} title={'Go to Home Page'}
+          <div className={'backButtonIcon'} onClick={goToHome}
                style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <FontAwesomeIcon icon={faArrowLeft} size={'2x'}/>
           </div>
@@ -55,7 +55,7 @@ function Projects() {
             ['Python', 'OpenCV', 'PyTorch', 'PHP', 'Google Cloud Platform']
           }/>
           <ProjectBlock title={`Suspendon't`} link={'https://github.com/cameronkinsella/suspendont'}
-                        color={'black'} src={suspendont} ratio={'67.45'} desc={
+                        color={'black'} src={suspendont} ratio={'65.45'} desc={
             <p>Suspendon't is a mobile and web app for tracking when your Twitter friends are suspended or delete their
               account.<br/><br/> The mobile app was built using <b>React Native</b> and is functional on both
               iOS and Android. The web app was build using <b>React</b>. A Node backend is used for communicating with
