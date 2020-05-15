@@ -5,9 +5,9 @@ import { faArrowLeft, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useHistory } from 'react-router-dom';
 
-//import abby from '../assets/thumbnails/abby.png'
 import mailstorm from '../assets/thumbnails/mailstorm.jpeg'
 import sudoku from '../assets/thumbnails/seppuku-sudoku.png'
+import suspendont from '../assets/thumbnails/suspendont.png'
 
 
 function Projects() {
@@ -55,7 +55,7 @@ function Projects() {
             ['Python', 'OpenCV', 'PyTorch', 'PHP', 'Google Cloud Platform']
           }/>
           <ProjectBlock title={`Suspendon't`} link={'https://github.com/cameronkinsella/suspendont'}
-                        color={'black'} src={mailstorm} ratio={'75'} desc={
+                        color={'black'} src={suspendont} ratio={'67.45'} desc={
             <p>Suspendon't is a mobile and web app for tracking when your Twitter friends are suspended or delete their
               account.<br/><br/> The mobile app was built using <b>React Native</b> and is functional on both
               iOS and Android. The web app was build using <b>React</b>. A Node backend is used for communicating with
