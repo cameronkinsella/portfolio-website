@@ -36,7 +36,7 @@ function Projects() {
       </header>
       <div>
         <div className={'App-body'}>
-          <ProjectBlock title={'Sudoku Solver'} link={'https://seppuku-sudoku.web.app'}
+          <ProjectBlock title={'Sudoku Solver'} link={'https://github.com/cameronkinsella/seppuku-sudoku'}
                         color={'black'} src={sudoku} ratio={'74.1'} desc={
             <p>A Sudoku solver which uses computer vision to solve any game of Sudoku from just a picture.<br/><br/>Users
               can upload an image of a Sudoku game to the serverless backend. <b>OpenCV</b> is used to extract each tile
