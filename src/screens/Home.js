@@ -11,6 +11,7 @@ import { SocialIcon } from '../components/SocialIcon';
 import me from '../assets/me.jpg'
 import power from '../assets/power.jpg'
 import gliding from '../assets/gliding.jpg'
+import logo from '../assets/logo-white.png'
 
 function Home() {
   const aboutMe = useRef(null);
@@ -25,6 +26,7 @@ function Home() {
   return (
     <div className={'App'}>
       <header className={'App-header'}>
+        <img src={logo} style={{height: 250, width: 250, marginTop: '-150px', marginBottom: '-30px'}} alt={'logo'}/>
         <h1 style={{ fontWeight: 200 }}>Cameron Kinsella</h1>
         <p>
           Software Developer, <br/>
